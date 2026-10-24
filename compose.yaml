@@ -3,6 +3,7 @@ services:
     image: greenthecolour1/djryze:main
     container_name: djryze
     restart: unless-stopped
+    env_file: stack.env
     init: true
     stop_signal: SIGINT
     stop_grace_period: 20s
