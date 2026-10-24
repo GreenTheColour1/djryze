@@ -1,9 +1,6 @@
 services:
   djryze:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: djryze:latest
+    image: greenthecolour1/djryze:main
     container_name: djryze
     restart: unless-stopped
     environment:
