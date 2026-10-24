@@ -6,8 +6,8 @@ services:
     image: djryze:latest
     container_name: djryze
     restart: unless-stopped
-    env_file:
-      - .env
+    environment:
+      DISCORD_TOKEN: "CHANGE_ME"
     init: true
     stop_signal: SIGINT
     stop_grace_period: 20s
