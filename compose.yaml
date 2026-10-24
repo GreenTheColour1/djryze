@@ -1,0 +1,22 @@
+services:
+  djryze:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: djryze:latest
+    container_name: djryze
+    restart: unless-stopped
+    env_file:
+      - .env
+    init: true
+    stop_signal: SIGINT
+    stop_grace_period: 20s
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

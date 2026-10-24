@@ -1,0 +1,26 @@
+[project]
+name = "djryze"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "GreenTheColour1", email = "dev@camerongreen.ca" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "discord-py[voice]>=2.7.1",
+    "yt-dlp[default]>=2026.10.21",
+]
+
+[project.scripts]
+djryze = "djryze:main"
+
+[build-system]
+requires = ["uv_build>=0.12.22,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pyright]
+venvPath = ".devenv/state"
+venv = "venv"
+pythonVersion = "3.14"
+include = ["bot.py", "src"]

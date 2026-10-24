@@ -1,0 +1,15 @@
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+
+# pre-commit
+.pre-commit-config.yaml
